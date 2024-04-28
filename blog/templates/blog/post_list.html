@@ -2,12 +2,12 @@
 
 {% block content %}
     {% for post in posts %}
-        <div class="post">
+        <div class="post" style="height: 200px; overflow-y: hidden;">
             <div class="date">
                 {{ post.published_date }}
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <p style="text-align: justify;">{{ post.text|linebreaksbr }}</p>
             <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
             <a href="{% url 'post_detail' pk=post.pk %}">Likes: {{ post.likes }}</a>
         </div>
