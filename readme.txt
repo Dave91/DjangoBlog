@@ -1,5 +1,5 @@
 env (from DjangoProjects): djenv\Scripts\activate
 python manage.py runserver
--||- make migrations blog
--||- migrate blog
--||- collectstatic
+python manage.py makemigrations blog
+python manage.py migrate blog
+python manage.py collectstatic
